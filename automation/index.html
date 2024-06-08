@@ -1,0 +1,810 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../about/">
+      
+      
+        <link rel="next" href="../Automator.reference/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Automation - g4bl_suite</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#automation-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="g4bl_suite" class="md-header__button md-logo" aria-label="g4bl_suite" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            g4bl_suite
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Automation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/badumbatish/g4bl_suite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="g4bl_suite" class="md-nav__button md-logo" aria-label="g4bl_suite" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    g4bl_suite
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/badumbatish/g4bl_suite" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set-up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set-up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g4beamline-script-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      G4beamline Script Set-up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G4beamline Script Set-up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detector-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detector output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detector output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ascii-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASCII Formatting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-file-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output file renaming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-script-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python script Set-up
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Code Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Automator.reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automator.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DataAnalyzer.reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataAnalyzer.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlobalVariables.reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Global Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set-up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set-up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g4beamline-script-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      G4beamline Script Set-up
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="G4beamline Script Set-up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detector-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detector output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detector output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ascii-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASCII Formatting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-file-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output file renaming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-script-set-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python script Set-up
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="automation-documentation">Automation Documentation</h1>
+<p>This section instructs you how to use g4blplot.automate(). For installation instructions, refer to <a href="https://badumbatish.github.io/fermi_proj/">https://github.com/badumbatish/fermi_proj/</a> for documentation, including installation, general usage, development and others.
+Please open up a GitHub issue (and/or) a pull request for recommendation on updating this documentation.</p>
+<p>Ever wish you were able to tell your computer to parallel process different configurations of parameters of your G4Beamline file overnight so you can go to sleep peacefully and wake up with fresh data to process</p>
+<p>Just telling it: "Hey hey hey, here are:"</p>
+<ul>
+<li>
+<p>The full path of my g4bl command</p>
+</li>
+<li>
+<p>The g4bl file I want you to run</p>
+</li>
+<li>
+<p>A python dictionary that comprises of the parameters and lists (or tuples of lists) of their possible values.</p>
+</li>
+<li>
+<p>[Optional] The number of process I want my computer to spawn.</p>
+</li>
+<li>
+<p>[Optional] How many cores should each G4BLMPI batch run</p>
+</li>
+<li>
+<p>[Optional] The data directory you want automate to search and skip tasks on </p>
+</li>
+</ul>
+<p>Well, here comes</p>
+<pre><code class="language-python">
+def automate(cmd: str, param_dict: dict, file_name : str,total_process_count = 1, mpi_count = None, detector_lst=None, data_directory=None)
+
+</code></pre>
+<h2 id="explanation">Explanation</h2>
+<p>The automate() function uses run_command(), generate_args() as helper functions, and multiprocessing, itertools, and subprocess as its library.</p>
+<p>The helper function run_command() doesn't output anything to the terminal. It uses subprocess.run(args,stdout=subprocess.DEVNULL). Readers are advised to test out their g4bl file on low statistics first to make sure the file runs perfectly before using automate().</p>
+<p>The automate() function doesn't care for existing files as it doesn't know how a detector is named. It will run the commands, rewriting the files. Be advised not to waste computing energy by reruning automate() when dealing with high statistics computation on supercomputers.</p>
+<p>g4blplot.py now only supports the parallel processing part of the g4bl script, but not the data plotting and processing of all the output files generated by automate(). If more people desire the feature, maybe.</p>
+<p>For data processing of multiple files, users can use itertools.product() to output a list of lists of all combinations of parameters values, then they can use calculate the length of the list as a sufficient number of subplots and histogram plots and use for-loops to plots them using the functions of g4blplot</p>
+<h2 id="set-up">Set-up</h2>
+<h3 id="g4beamline-script-set-up">G4beamline Script Set-up</h3>
+<h4 id="parameters">Parameters</h4>
+<p>In this example</p>
+<ul>
+<li>
+<p>The parameter for the mean momentum is _meanMomentum</p>
+</li>
+<li>
+<p>The parameter for the mean angle of the x-axis is _meanXp</p>
+</li>
+</ul>
+<p>Start by adding <strong>-unset</strong> to all of your parameters in your .g4bl file.</p>
+<pre><code class="language-g4bl">param -unset _meanMomentum=100
+param -unset _meanXp=0
+</code></pre>
+<h4 id="detector-output">Detector output</h4>
+<h5 id="ascii-formatting">ASCII Formatting</h5>
+<p><em>Before:</em></p>
+<pre><code class="language-g4bl">virtualdetector Det radius=15.875 length=1 color=1,1,1 material=Vacuum
+</code></pre>
+<p><em>After:</em></p>
+<pre><code class="language-g4bl">virtualdetector Det radius=15.875 length=1 color=1,1,1 material=Vacuum format=ascii
+</code></pre>
+<h5 id="output-file-renaming">Output file renaming</h5>
+<p>Place a detector at some coordinate and include a <em>rename</em> command in the same line in the g4bl script</p>
+<p>The general (accepted by g4blplot.automate) format to format the output file name is </p>
+<pre><code class="language-g4bl">param1$_param1|param2$_param2|param3$_param3[|post_fix]
+</code></pre>
+<p>where [...] is optional</p>
+<p>The | is to separate different parameters.</p>
+<p>The $ is to reference the value of that parameters.</p>
+<p>For example:</p>
+<pre><code class="language-g4bl">place Det rename=_meanMomentum$_meanMomentum|_meanXp$_meanXp z=5921
+</code></pre>
+<h3 id="python-script-set-up">Python script Set-up</h3>
+<p>The script should start with</p>
+<pre><code class="language-python3">from g4bl_suite import Automator
+</code></pre>
+<p>Then the user should start by creating a parameter dictionary <em>param_dict</em> to feed it into <em>g4blplot.automate()</em></p>
+<pre><code class="language-python3">
+param_dict = {
+
+    &quot;_meanMomentum&quot;: [100,200,300],
+
+    &quot;_meanXp&quot;: [-0.4,-0.2,0,0.2,0.4]
+}
+
+</code></pre>
+<p>Check if the python process you are executing is main and execute the automate() function if true:</p>
+<pre><code class="language-python3">
+if __name__ == '__main__':
+
+    plot.automate(cmd = &quot;/Applications/G4beamline-3.08.app/Contents/MacOS/g4bl&quot;,
+                    param_dict=param_dict,
+                    file_name = &quot;g4beamline_script/Pion_Line_BeamEllipse.g4bl&quot;,
+                    total_process_count=4)
+</code></pre>
+<p>When you run this python program, below is its output, there should be a bar counting and update you on your computing progress (assuming you wrote the correct g4beamline script that you have tested already):</p>
+<p>Here we call the python file in the root directory, with one of its subdirectory is g4beamline_script</p>
+<pre><code class="language-bash">python3 src/main.py
+Creating pool with total process count = 4, pool process count = 4, G4BLMPI process count = None
+
+Batch progress bar: 100%|████████████████████████████████████████████████████████████████████████████████| 15/15 [00:03&lt;00:00, 4.89it/s]
+
+</code></pre>
+<p>You will have these files in the file directory that you run your g4bl command.</p>
+<pre><code class="language-bash">
+jjsm@Jasmines-MacBook-Air fermi_proj % ls det*.txt
+
+_meanMomentum100|_meanXp-0.2.txt _meanMomentum100|_meanXp0.4.txt  _meanMomentum200|_meanXp-0.4.txt _meanMomentum200|_meanXp0.txt    _meanMomentum300|_meanXp0.2.txt
+_meanMomentum100|_meanXp-0.4.txt _meanMomentum100|_meanXp0.txt    _meanMomentum200|_meanXp0.2.txt  _meanMomentum300|_meanXp-0.2.txt _meanMomentum300|_meanXp0.4.txt
+_meanMomentum100|_meanXp0.2.txt  _meanMomentum200|_meanXp-0.2.txt _meanMomentum200|_meanXp0.4.txt  _meanMomentum300|_meanXp-0.4.txt _meanMomentum300|_meanXp0.txt
+
+
+</code></pre>
+<p>Here, we see that the g4beamline script outputs where we call the python script, not where the python script is located.</p>
+<p>We should then cd into a data directory and call the script from there</p>
+<p>End of documentation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
